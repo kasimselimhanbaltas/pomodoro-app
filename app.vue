@@ -8,6 +8,25 @@
     />
   </head>
   <div>
-    <Timer></Timer>
+    <NuxtPage/>
   </div>  
 </template>
+
+<script>
+export default {
+  router: {
+    extendRoutes(routes, resolve) {
+      return [
+        {
+          name: 'main',
+          path: '/Pomodoro', // <--- change this
+          component: resolve(__dirname, 'pages/about/index.vue'),
+          chunkName: 'pages/about/index'
+        },
+      ]
+    }
+  }
+
+}
+
+</script>
