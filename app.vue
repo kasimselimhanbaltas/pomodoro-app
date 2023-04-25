@@ -25,7 +25,13 @@ export default {
         },
       ]
     }
-  }
+  },
+  
+  created(){
+    if (process.browser){
+      console.log(window.innerWidth, window.innerHeight);
+    }
+  },
 
 }
 
